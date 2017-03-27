@@ -1,0 +1,259 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{mathtools}% http://ctan.org/pkg/mathtools
+%\graphicspath{ {/Users/semenfedotov/Desktop/Job/images} }
+\graphicspath{ {/Users/semenfedotov/Desktop/ImagesLaTex/} }
+\usepackage[T2A,T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian,english]{babel}
+\usepackage[document]{ragged2e}
+\usepackage[a4paper,left=20mm,right=20mm,
+top=10mm,bottom=20mm,bindingoffset=0cm]{geometry}
+\usepackage[dvipsnames]{xcolor}
+
+
+\usepackage{minted}
+\usepackage{hyperref}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{mathtools}% http://ctan.org/pkg/mathtools
+\usepackage[T2A,T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian,english]{babel}
+\usepackage[document]{ragged2e}
+
+
+%--------------------------------------
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+%--------------------------------------
+ 
+%Hyphenation rules
+%--------------------------------------
+\usepackage{hyphenat}
+%-----
+
+
+%PYTHON HIGHLIGHTS
+%_______________------_____________---------____
+
+% Default fixed font does not support bold face
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{12} % for bold
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{12}  % for normal
+
+% Custom colors
+\usepackage{color}
+\definecolor{deepblue}{HTML}{0C7F12}
+\definecolor{deepred}{HTML}{B82327}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+
+
+
+\usepackage{listings}
+
+% Python style for highlighting
+\newcommand\pythonstyle{\lstset{
+language=Python,
+basicstyle=\ttm,
+otherkeywords={self},             % Add keywords here
+keywordstyle=\ttb\color{deepblue},
+emph={MyClass,__init__},          % Custom highlighting
+emphstyle=\ttb\color{deepred},    % Custom highlighting style
+stringstyle=\color{deepred},
+frame=tb,                         % Any extra options here
+showstringspaces=false            % 
+}}
+
+
+% Python environment
+\lstnewenvironment{python}[1][]
+{
+\pythonstyle
+\lstset{#1}
+}
+{}
+
+% Python for external files
+\newcommand\pythonexternal[2][]{{
+\pythonstyle
+\lstinputlisting[#1]{#2}}}
+
+% Python for inline
+\newcommand\pythoninline[1]{{\pythonstyle\lstinline!#1!}}
+%______________________
+
+
+
+\definecolor{background}{HTML}{000000}
+\definecolor{comments}{HTML}{51D05D}
+\definecolor{class}{HTML}{D63DA3}
+\definecolor{global}{HTML}{29F096}
+\definecolor{macros}{HTML}{E4834C}
+\definecolor{string}{HTML}{FF484D}
+\definecolor{digit}{HTML}{8789FB}
+\definecolor{std}{HTML}{0BB3FC}
+
+
+
+\lstset{language=C++,
+				backgroundcolor=\color{background}\ttfamily,
+                basicstyle=\ttfamily\color{white},
+                deletekeywords={\text{include}},
+                keywordstyle=\color{class}\ttfamily,
+                keywordstyle=[2]\color{macros},
+                keywordstyle=[3]\color{class},
+                keywordstyle=[4]\color{std},
+                keywordstyle=[5]\color{global},
+                stringstyle=\color{string}\ttfamily,
+                commentstyle=\color{comments}\ttfamily,
+                showstringspaces=false,
+                %identifierstyle=\color{blue}\ttfamily,
+                numberstyle=\tiny\color{digit}\ttfamily,
+                keywords=[2]{\text{include}, INT32_MAX},
+                keywords=[3]{if, for, else, int, while, do, double, bool, char, false, true, break, return, class, public, private, default, const, void},
+                keywords=[4]{std,vector, pair, Edge, Point, resize, push_back, rand, swap},
+                keywords=[5]{DSU, PerfectMatching, SpanningTree},
+                morecomment=[l][\color{macros}]{\#}
+		}
+
+
+
+
+%Russian-specific packages
+%--------------------------------------
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+%--------------------------------------
+ 
+%Hyphenation rules
+%--------------------------------------
+\usepackage{hyphenat}
+%-----
+\usepackage{listings}
+\usepackage{color}
+\usepackage{amsthm}
+
+
+
+\newcommand{\tab}[1]{\hspace{#1mm}}
+\newcommand{\totext}[1]{\stackrel{\textup{#1}}{\to}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\argmin}[1]{\underset{#1}{\mathrm{argmin}}}
+\newcommand{\argmax}[1]{\underset{#1}{\mathrm{argmax}}}
+
+%\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{corollary}{Corollary}[theorem]
+%\newtheorem{lemma}[section]{$\text{Лемма}$}
+%
+
+
+
+
+\theoremstyle{plain}
+\newtheorem{theo}{Теорема}
+\newtheorem{stat}{Утверждение}
+\newtheorem{lemma}{Лемма}
+\newtheorem{pro}{Задача}
+\newtheorem{con}{Гипотеза}
+\newtheorem{condi}{Условие}
+\newtheorem{ans}{Ответ}
+\theoremstyle{definition}
+\newtheorem{defi}{Определение}
+\newtheorem{note}{Замечание}
+
+
+
+
+
+
+
+
+
+
+
+
+\title{Задание 3}
+\author{Семен Федотов}
+\date{Март, 2017}
+
+
+\begin{document}
+	\maketitle
+	
+\section{Теоретические задачи}
+	
+\begin{condi}
+	Показать справедливость Bias-variance-noise decomposition
+\end{condi}
+
+\begin{proof}[Доказательство]
+	\href{https://github.com/ml-mipt/ml-mipt-part1/blob/master/2017/seminars/03-pandas/bias_variance.pdf}{\textcolor{blue}{Вот решение данной задачи}}.
+\end{proof}
+
+\begin{condi}
+	Bagging. Смещение и разброс.
+\end{condi}
+
+\begin{proof}[Доказательство]
+	Ну смещение у нас не изменится, т.к. все алгоритмы в композиции одинаково распределены и, следовательно: $$E_{X,Y,x,y}(a(x)) = \frac{1}{k}\sum E_{X,Y,x,y}(a_i(x)) = E_{X,Y,x,y}(a_1(x)).$$ \\
+	Посмотрим на разброс:
+	$Var(a(x)) = \frac{1}{k^2}(\sum \sigma^2 + \sum\limits_{i,j} cov(a_i(x), a_j(x))).$, где $cov_{i,j} = \rho_{i,j} \cdot \sigma^2$, где $\rho_{i,j}$ - коэффициент корреляции между i-тым и j-тым алгоритмом. Отсюда следует, что чем менее они коррелируемы, тем меньше будет разброс. Как раз таки бэггинг и старается сделать менее зависимыми алгоритмы из композиции.
+\end{proof}
+	
+\begin{condi}
+	$\xi_1, \dots \xi_M$ - о.р.с.в. с $D\xi_1 = \sigma^2$  и $\forall i,j \quad \rho(\xi_i, \xi_j) = \rho > 0$ \\
+	Доказать, что $D\overline{X} = \rho \sigma^2 + (1 - \rho) \frac{\sigma^2}{M}$
+	
+\end{condi}	
+	
+\begin{proof}[Доказательство]
+	Знаем, что дисперсия суммы случайных величин равна сумме их дисперсий и сумме попарных ковариаций. Ковариация и коэффициент корреляции связаны следующим соотношением: $$\rho = \frac{cov(\xi, \eta)}{\sqrt{D\xi D\eta}}$$ \\
+	В нашем случае $D\xi = D\eta = \sigma^2 \Rightarrow cov(\xi, \eta) = \rho \sigma^2$. \\
+	Посмотрим, что мы получили: 
+	$$ D\overline{X} = \frac{1}{M^2}(\sum \sigma^2 + M(M - 1)\rho \sigma^2 ) $$
+	$$D\overline{X} = \frac{1}{M}(\sigma^2 + (M - 1)\rho \sigma^2 )$$
+	$$D\overline{X} = \frac{1}{M}(\sigma^2(1 - \rho) +M\rho \sigma^2 ) = 
+	\rho \sigma^2 + \frac{1}{M}\sigma^2(1 - \rho) \text{ ЧТД.}$$
+
+
+\end{proof}	
+
+\section{Дополнительные вопросы}
+
+\begin{condi}
+	Как сформирован $\text{ sample\_submission.tsv? }$
+\end{condi}
+\begin{proof}
+	Просто взято среднее по y в тренировочной выборке.
+	\begin{lstlisting}
+		ans = train.y.mean()
+	\end{lstlisting}
+\end{proof}
+
+\begin{condi}
+	Посмотреть, как строится DecisionTree[Classifier|Regressor] в sklearn
+\end{condi}
+
+\begin{proof}
+	Разбиения в вершинах определяются на основе выбранного информационного критерия + (мы либо выбираем лучший из возможных признаков, либо берем рандомный) + передается минимальное число попавших в лист и тд, все это можно посмотреть в описании этого класса. Пожно предварительно посортить , чтобы искать быстрее разбиения(ведь имеет смысл ходить не по всем точкам, а лишь между/(в точках) выборки признаков), есть также параметр $\text{min\_impurity\_split}$ - который может назначить вершину нодой, если максимум информативности меньше заданной нами границы
+\end{proof}
+
+\begin{condi}
+	Эту не успел сделать :(
+\end{condi}
+
+\end{document}
