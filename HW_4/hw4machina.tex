@@ -1,0 +1,240 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{mathtools}% http://ctan.org/pkg/mathtools
+%\graphicspath{ {/Users/semenfedotov/Desktop/Job/images} }
+\graphicspath{ {/Users/semenfedotov/Desktop/ImagesLaTex/} }
+\usepackage[T2A,T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian,english]{babel}
+\usepackage[document]{ragged2e}
+\usepackage[a4paper,left=20mm,right=20mm,
+top=10mm,bottom=20mm,bindingoffset=0cm]{geometry}
+\usepackage[dvipsnames]{xcolor}
+
+
+\usepackage{minted}
+\usepackage{hyperref}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{mathtools}% http://ctan.org/pkg/mathtools
+\usepackage[T2A,T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian,english]{babel}
+\usepackage[document]{ragged2e}
+
+
+%--------------------------------------
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+%--------------------------------------
+ 
+%Hyphenation rules
+%--------------------------------------
+\usepackage{hyphenat}
+%-----
+
+
+%PYTHON HIGHLIGHTS
+%_______________------_____________---------____
+
+% Default fixed font does not support bold face
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{12} % for bold
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{12}  % for normal
+
+% Custom colors
+\usepackage{color}
+\definecolor{deepblue}{HTML}{0C7F12}
+\definecolor{deepred}{HTML}{B82327}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+
+
+
+\usepackage{listings}
+
+% Python style for highlighting
+\newcommand\pythonstyle{\lstset{
+language=Python,
+basicstyle=\ttm,
+otherkeywords={self},             % Add keywords here
+keywordstyle=\ttb\color{deepblue},
+emph={MyClass,__init__},          % Custom highlighting
+emphstyle=\ttb\color{deepred},    % Custom highlighting style
+stringstyle=\color{deepred},
+frame=tb,                         % Any extra options here
+showstringspaces=false            % 
+}}
+
+
+% Python environment
+\lstnewenvironment{python}[1][]
+{
+\pythonstyle
+\lstset{#1}
+}
+{}
+
+% Python for external files
+\newcommand\pythonexternal[2][]{{
+\pythonstyle
+\lstinputlisting[#1]{#2}}}
+
+% Python for inline
+\newcommand\pythoninline[1]{{\pythonstyle\lstinline!#1!}}
+%______________________
+
+
+
+\definecolor{background}{HTML}{000000}
+\definecolor{comments}{HTML}{51D05D}
+\definecolor{class}{HTML}{D63DA3}
+\definecolor{global}{HTML}{29F096}
+\definecolor{macros}{HTML}{E4834C}
+\definecolor{string}{HTML}{FF484D}
+\definecolor{digit}{HTML}{8789FB}
+\definecolor{std}{HTML}{0BB3FC}
+
+
+
+\lstset{language=C++,
+				backgroundcolor=\color{background}\ttfamily,
+                basicstyle=\ttfamily\color{white},
+                deletekeywords={\text{include}},
+                keywordstyle=\color{class}\ttfamily,
+                keywordstyle=[2]\color{macros},
+                keywordstyle=[3]\color{class},
+                keywordstyle=[4]\color{std},
+                keywordstyle=[5]\color{global},
+                stringstyle=\color{string}\ttfamily,
+                commentstyle=\color{comments}\ttfamily,
+                showstringspaces=false,
+                %identifierstyle=\color{blue}\ttfamily,
+                numberstyle=\tiny\color{digit}\ttfamily,
+                keywords=[2]{\text{include}, INT32_MAX},
+                keywords=[3]{if, for, else, int, while, do, double, bool, char, false, true, break, return, class, public, private, default, const, void},
+                keywords=[4]{std,vector, pair, Edge, Point, resize, push_back, rand, swap},
+                keywords=[5]{DSU, PerfectMatching, SpanningTree},
+                morecomment=[l][\color{macros}]{\#}
+		}
+
+
+
+
+%Russian-specific packages
+%--------------------------------------
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+%--------------------------------------
+ 
+%Hyphenation rules
+%--------------------------------------
+\usepackage{hyphenat}
+%-----
+\usepackage{listings}
+\usepackage{color}
+\usepackage{amsthm}
+
+
+
+\newcommand{\tab}[1]{\hspace{#1mm}}
+\newcommand{\totext}[1]{\stackrel{\textup{#1}}{\to}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\argmin}[1]{\underset{#1}{\mathrm{argmin}}}
+\newcommand{\argmax}[1]{\underset{#1}{\mathrm{argmax}}}
+
+%\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{corollary}{Corollary}[theorem]
+%\newtheorem{lemma}[section]{$\text{Лемма}$}
+%
+
+
+
+
+\theoremstyle{plain}
+\newtheorem{theo}{Теорема}
+\newtheorem{stat}{Утверждение}
+\newtheorem{lemma}{Лемма}
+\newtheorem{pro}{Задача}
+\newtheorem{con}{Гипотеза}
+\newtheorem{condi}{Условие}
+\newtheorem{ans}{Ответ}
+\theoremstyle{definition}
+\newtheorem{defi}{Определение}
+\newtheorem{note}{Замечание}
+
+
+
+
+
+
+
+
+
+
+
+
+\title{Задание 4}
+\author{Семен Федотов, 497 группа}
+\date{Апрель, 2017}
+
+
+
+\begin{document}
+	\maketitle
+
+\section{Знакомство с линейным классификатором}
+
+\paragraph{1 - 17}
+
+\begin{enumerate}
+	\item $a(x) = sign(<w, x> + w_0) = sign(\hat{y})$
+	\item Отступ это следующая величина $M(y_i, \hat{y_i}) = y_i \cdot \hat{y_i}$. Если отступ больше 0, то мы не ошиблись, если меньше - ошиблись.  Если сильно положительный, то это говорит о сильной уверенности нашего алгоритма в этом ответе, а если он сильно отрицательный, то если наша модель хорошая, значит, этот элемент, скорее всего, выброс
+	\item Просто добавим еще одну компоненту для x, и у всех х она будет равна 1.
+	\item $Q(a, X) = \frac{1}{n} \sum \lbrack M_i \leq 0  \rbrack$ У наилучшего он равен нулю, вед там нет ни одной ошибки , а следовательно все отступы меньше нуля
+	\item Возьмем веса равные нулю, тогда все индикаторы занулятся
+	\item $\frac{1}{n} \sum L(M)$, где М - отступ
+	\item Это функция, характеризующая величину ошибки на конкретном объекте. Хотим ее брать дифференцируемой, чтобы использовать градиентный спуск. При росте отступа, она невозрастает.
+	\item L = $\lbrack M \leq 0  \rbrack$
+	\item Некоторая функция, зависящая от весов алгоритма.(В статистическом смысле ее можно понимать как априорное распределение на весах). $L_1 \rightarrow laplace, \quad L_2 \rightarrow multinomial \quad normal$ Первая - сумма модулей остатков, а вторая - сумма квадратов остатков.
+	\item Регуляризация часто помогает бороться с переобучением, например, в случае, если у нашей модели получились очень большие веса(она сильно подстроилась под тренировочную выборку), а когда к нам придет новый элемент мы получим ужасный ответ, это и есть обобщающая способность.
+	\item Если мы выйдем из него, то значение функции риска сильно скакнет 
+	\item При выходе за границы, функционал риска будет расти
+	\item С регуляризатором, ведь это неотрицательная функция и она увеличивает ее значение
+	\item Все зависит от ситуации, может произойти и то, и то. Мы можем сильно переобучиться без регуляризатора и получить гигантское значение функции риска, но также и с регуляризатором, если все же он не сильно уж и нужен в нашей ситуации
+	\item Accuracy = $\frac{\sum\limits_{i = 1}^n \lbrack M_i > 0  \rbrack}{n}$, Precision = $\frac{TP}{TP + FP}$, Recall = $\frac{TP}{TP + FN}$
+	\item AUC - area under curve. ROC(Receiver operating characteristic) - кривая построенная в осях TPR, FPR, где TPR = $\frac{TP}{TP + FN} =$ Precision, FPR = $\frac{FP}{FP + TN}$
+	\item Ну, нужно попереберать границы(threshold), по которым мы будем определять к какому все же классу отнести очередной элемент. будем перебирать просто границы как какое-то число между двумя соседними элементами в выборке.
+	
+\end{enumerate}
+
+\section{Вероятностный смысл классификаторов}
+
+Как я говорил ранее, $L_1$ и  $L_2$ регуляризации задают априорные распределения Лапласа и Многомерное Нормальное, соответственно. Как это показать? Ну мы собираемся минимизировать функционал ошибки, который в нашем случае равен $L = \sum L_i + R(w)$. Хотим считать, что это все логарифм правдоподобия какой-то выборки, т.е $L = \sum lnp(y_i, x_i \mid \omega) + lnp(\omega, \lambda) \totext{max}$. Отсюда видно что, $R(\omega)$ задает априорное распределение: $e^R = p(\omega, \lambda)$
+	
+\section{SVM + Maximize stripe width}
+	
+	У нас выборка линейно разделима, а что это значит? 
+	$Q(w) = \sum \lbrack M \leq 0 \rbrack = 0$. Круто, но нам нужно расположить полосу так, чтобы расширить разделяющуюся полосу. Изменим веса(домножим на какое-то число), чтобы минимальное значение отступа было равно 1. Так как мы хотим расширить полосу, то на ее границах должны лежать точки разных классов, обозначим их $(x_-, x_+)$, ну тогда ширину полосы мы можем найти следующим образом(возьмем просто проекцию вектора, соединябщего эти точки на вектор весов): $<x_+ - x_-, \frac{w}{||w||}> = \frac{<x_+, w> - <x_-, w>}{||w||}$ / Так как мы провели ту нормировку, то оступы везде равны 1/ = $\frac{2}{||w||}$. Раз мы хотим ее максимищировать, то это то же самое, что минимизировать $\frac{1}{2} ||w||^2$ и еще нужно не забыть условие, которого мы добились с помощью нормировки(минимум по всем значения отступа больше 1). В случае линейно неразделимой выборки у нас отсуп может и не быть больше 1, а поэтому нужно добавить новые переменные $\xi_i \geq 0$. Тогда получим следующую оптимизационную задачу:
+	
+	$$\frac{1}{2}||w||^2 + \lambda \cdot \sum \xi_i$$
+	$$M_i \geq 1 - \xi_i$$
+	$$\xi_i \geq 0$$
+	
+\section{Kernel Trick}
+
+Это эллипс, возьмем квадратичное ядро: $K(x, y) = <x,y>^2 = (x_1y_1 + x_2y_2)^2 = (x_1y_1)^2 + 2x_1x_2y_1y_2 + (x_2y_2)^2 = <(x_1^2,x_2^2 , \sqrt{2}x_1x_2), (y_1^2, y_2^2, \sqrt{2}y1_y1)>$. Как видно, это пространство размерности 3
+
+\end{document}
